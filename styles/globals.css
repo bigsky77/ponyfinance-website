@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 100;
+    src: url("/fonts/PPNeueMachina-Light.otf");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 400;
+    src: url("/fonts/PPNeueMachina-Regular.otf");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 900;
+    src: url("/fonts/PPNeueMachina-Ultrabold.otf");
+  }
+
+  html {
+    font-family: "Neue Machina";
+  }
+}
+
+/* * {
+  border: 1px solid black;
+} */
