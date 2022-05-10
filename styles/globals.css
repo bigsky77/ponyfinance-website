@@ -44,7 +44,7 @@
   }
 
   .header-clip {
-    clip-path: ellipse(100% 59% at 50% 41%);
+    clip-path: ellipse(150% 59% at 50% 41%);
   }
 
   @media (min-width: 768px) {
