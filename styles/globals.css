@@ -5,22 +5,52 @@
 @layer base {
   @font-face {
     font-family: "Neue Machina";
-    font-weight: 100;
-    src: url("/fonts/PPNeueMachina-Light.otf");
+    font-weight: 200;
+    src: url("/fonts/PPNeueMachina-Ultralight.woff2");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 300;
+    src: url("/fonts/PPNeueMachina-Light.woff2");
   }
   @font-face {
     font-family: "Neue Machina";
     font-weight: 400;
-    src: url("/fonts/PPNeueMachina-Regular.otf");
+    src: url("/fonts/PPNeueMachina-Regular.woff2");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 500;
+    src: url("/fonts/PPNeueMachina-Medium.woff2");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 700;
+    src: url("/fonts/PPNeueMachina-Bold.woff2");
+  }
+  @font-face {
+    font-family: "Neue Machina";
+    font-weight: 800;
+    src: url("/fonts/PPNeueMachina-Ultrabold.woff2");
   }
   @font-face {
     font-family: "Neue Machina";
     font-weight: 900;
-    src: url("/fonts/PPNeueMachina-Ultrabold.otf");
+    src: url("/fonts/PPNeueMachina-Black.woff2");
   }
 
   html {
     font-family: "Neue Machina";
+  }
+
+  .header-clip {
+    clip-path: ellipse(100% 59% at 50% 41%);
+  }
+
+  @media (min-width: 768px) {
+    .header-clip {
+      clip-path: ellipse(100% 68% at 50% 32%);
+    }
   }
 }
 

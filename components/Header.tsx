@@ -5,8 +5,8 @@ import { Menu } from "@headlessui/react";
 
 const Header: React.FC = () => {
   return (
-    <div className="absolute flex flex-row justify-evenly md:justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full h-12 md:h-16 md:px-10 my-8 md:my-16 bg-black bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-2xl z-10">
-      <div className="hidden md:flex justify-center items-center">
+    <div className="absolute flex flex-row justify-evenly md:justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full h-16 md:h-24 md:px-10 my-10 md:my-12 bg-black bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-2xl z-10">
+      <div className="hidden md:flex justify-center items-center cursor-pointer">
         <Link href="/">
           <Image
             src="/pony-logo.png"
@@ -22,55 +22,88 @@ const Header: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Blog
+          <div className="group flex flex-row justify-center items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-none group-hover:bg-[#847CFF] transform -translate-y-[2px]"></div>
+            <div className="flex justify-center items-center h-4">Blog</div>
+          </div>
         </a>
-        <a>Gitbook</a>
+        <a href="docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
+          <div className="group flex flex-row justify-center items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-none group-hover:bg-[#847CFF] transform -translate-y-[2px]"></div>
+            <div className="flex justify-center items-center h-4">Gitbook</div>
+          </div>
+        </a>
         <div>
           <Menu>
-            <Menu.Button>Socials</Menu.Button>
+            <Menu.Button>
+              <div className="group flex flex-row justify-center items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-none group-hover:bg-[#847CFF] transform -translate-y-[2px]"></div>
+                <div className="flex justify-center items-center h-4">
+                  Socials
+                </div>
+              </div>
+            </Menu.Button>
             <Menu.Items
               as="div"
-              className="absolute flex flex-col justify-center items-start gap-4 p-4 top-14 md:top-[72px] bg-black md:bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-xl transform -translate-x-4"
+              className="absolute flex flex-col justify-center items-start gap-6 p-4 top-[68px] md:top-[104px] bg-black md:bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-xl transform -translate-x-2"
             >
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    className={`p-1 w-full ${
-                      active && "bg-blue-500 rounded-md"
-                    }`}
                     href="https://twitter.com/ponyfinance"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Twitter
+                    <div className="group flex flex-row justify-start items-center gap-2">
+                      <div
+                        className={`w-2 h-2 rounded-full bg-none ${
+                          active && "bg-[#847CFF]"
+                        } transform -translate-y-[2px]`}
+                      ></div>
+                      <div className="flex justify-center items-center h-4">
+                        Twitter
+                      </div>
+                    </div>
                   </a>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    className={`p-1 w-full ${
-                      active && "bg-blue-500 rounded-md"
-                    }`}
                     href="https://discord.gg/UfpsZUFuDu"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Discord
+                    <div className="group flex flex-row justify-start items-center gap-2">
+                      <div
+                        className={`w-2 h-2 rounded-full bg-none ${
+                          active && "bg-[#847CFF]"
+                        } transform -translate-y-[2px]`}
+                      ></div>
+                      <div className="flex justify-center items-center h-4">
+                        Discord
+                      </div>
+                    </div>
                   </a>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    className={`p-1 w-full ${
-                      active && "bg-blue-500 rounded-md"
-                    }`}
                     href="https://t.me/+Afmfij2i31g4OGJh"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Telegram
+                    <div className="group flex flex-row justify-start items-center gap-2">
+                      <div
+                        className={`w-2 h-2 rounded-full bg-none ${
+                          active && "bg-[#847CFF]"
+                        } transform -translate-y-[2px]`}
+                      ></div>
+                      <div className="flex justify-center items-center h-4">
+                        Telegram
+                      </div>
+                    </div>
                   </a>
                 )}
               </Menu.Item>

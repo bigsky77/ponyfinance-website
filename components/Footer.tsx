@@ -10,7 +10,9 @@ const Footer: React.FC = () => {
             <Image layout="fill" src="/pony-logo.png" alt="pony finance" />
           </div>
           <div className="flex flex-col justify-center items-start gap-4 text-lg text-[#CECECE] md:mb-16">
-            <a>Gitbook</a>
+            <a href="docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
+              Gitbook
+            </a>
             <a
               href="https://medium.com/ponyfinance"
               target="_blank"
@@ -50,7 +52,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="absolute flex flex-row justify-end h-1/3 xl:h-64 w-full overflow-hidden bg-black">
+      <div className="absolute flex flex-row justify-end h-64 w-full mb-4 max-w-[1770px] bg-black overflow-hidden ">
         <img src="/pony-footer.png" alt="" />
       </div>
       <div className="flex md:hidden justify-center items-center text-center text-xs text-[#CECECE] my-8 z-10">
