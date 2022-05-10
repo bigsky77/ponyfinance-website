@@ -25,21 +25,30 @@ const Home: NextPage = () => {
               <div className="text-xl text-white text-center md:text-left mb-8 md:mb-[60px] w-[348px] md:w-[548px]">
                 Earn more with PONY, the Passive Omnichain Net Yield Index
               </div>
-              <a className="flex justify-center items-center w-fit h-10 md:h-16 px-8 md:px-16 mb-14 md:mb-0 bg-white rounded-full text-lg text-[#5000FF]">
+              <a
+                href="https://share.hsforms.com/1MLLXd0LWQSejb-OcrN5AFgd1av5"
+                target="_blank"
+                rel="noreferrer"
+                className="flex justify-center items-center w-fit h-10 md:h-16 px-8 md:px-16 mb-14 md:mb-0 bg-white rounded-full text-lg text-[#5000FF]"
+              >
                 Join the Waitlist
               </a>
             </div>
-            <img
-              src="/hero-cowboy.png"
-              alt="pony rider"
-              className="hidden md:block w-[448px]"
-            />
+            <div className="relative hidden md:block w-[448px] h-[522px]">
+              <Image layout="fill" src="/hero-cowboy.png" alt="pony rider" />
+            </div>
           </div>
-          <img src="/divide.svg" className="hidden md:block w-full mx-0 px-0" />
+          <img src="/divide.svg" alt="" className="hidden md:block w-full mx-0 px-0" />
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-36 my-16 md:my-40">
-          <img src="/pony-token.png" alt="$PONY" className="w-48 md:w-64" />
-          <div className="flex flex-col justify-start items-start w-[348px] md:w-[757px]">
+          <div className="relative w-48 md:w-64 h-48 md:h-64">
+            <Image
+              layout="fill"
+              src="/pony-token.png"
+              alt="$PONY"
+            />
+          </div>
+          <div className="flex flex-col justify-start items-start w-[348px] md:w-[548px]">
             <div className="text-2xl md:text-4xl text-[#2A0086] mb-6 md:mb-[30px]">
               One interest-bearing token, infinite stablecoin yield
             </div>
