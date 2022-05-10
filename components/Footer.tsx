@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full bg-footer bg-cover pt-32 overflow-hidden">
-      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full z-10">
+      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-5xl w-full z-10">
         <div className="flex flex-col justify-center items-start gap-8">
           <div className="relative w-[200px] h-[40px]">
             <Image layout="fill" src="/pony-logo.png" alt="pony finance" />

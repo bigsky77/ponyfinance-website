@@ -5,7 +5,7 @@ import { Menu } from "@headlessui/react";
 
 const Header: React.FC = () => {
   return (
-    <div className="absolute flex flex-row justify-evenly md:justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full h-16 md:h-24 md:px-10 my-10 md:my-12 bg-black bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-2xl z-10">
+    <div className="absolute flex flex-row justify-evenly md:justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-5xl w-full h-16 md:h-24 md:px-10 my-10 md:my-12 bg-black bg-opacity-50 border-[0.5px] border-[#4A4A4A] rounded-2xl z-10">
       <div className="hidden md:flex justify-center items-center cursor-pointer">
         <Link href="/">
           <Image
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           />
         </Link>
       </div>
-      <div className="flex flex-row justify-center items-center gap-14 text-base md:text-lg text-white">
+      <div className="flex flex-row justify-evenly md:justify-center items-center gap-14 md:gap-14 text-base md:text-xl text-white">
         <a
           href="https://medium.com/ponyfinance"
           target="_blank"
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         <a href="docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
           <div className="group flex flex-row justify-center items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-none group-hover:bg-[#847CFF] transform -translate-y-[2px]"></div>
-            <div className="flex justify-center items-center h-4">Gitbook</div>
+            <div className="flex justify-center items-center h-4">Docs</div>
           </div>
         </a>
         <div>

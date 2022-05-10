@@ -18,8 +18,8 @@ const Home: NextPage = () => {
 
       <main className="flex flex-col justify-start items-center w-screen min-h-screen">
         <Header />
-        <div className="flex flex-col justify-center items-center w-full pt-32 md:pt-40 md:pb-16 mx-0 px-0 bg-landing-hero bg-cover header-clip">
-          <div className="flex flex-row justify-center md:items-center">
+        <div className="flex flex-col justify-center items-center w-full pt-32 md:pt-48 lg:pt-40 md:pb-16 mx-0 px-0 bg-landing-hero bg-cover header-clip">
+          <div className="flex flex-row justify-center md:justify-start lg:justify-center md:items-center w-full md:max-w-2xl lg:max-w-5xl">
             <div className="flex flex-col justify-center md:justify-start items-center md:items-start max-w-xl">
               <h1 className="w-[348px] md:w-auto text-3xl md:text-5xl md:leading-[64px] text-white text-center md:text-left font-bold mb-5">
                 The best stablecoin yields across{" "}
@@ -42,15 +42,15 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-36 my-16 md:my-20 lg:my-40">
-          <div className="relative w-48 md:w-64 h-48 md:h-64">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 md:gap-12 lg:gap-0 w-full md:max-w-2xl lg:max-w-5xl my-16 md:my-20 lg:my-40">
+          <div className="relative w-48 md:w-72 h-48 md:h-72">
             <Image layout="fill" src="/pony-token.png" alt="$PONY" />
           </div>
-          <div className="flex flex-col justify-start items-start w-[348px] md:w-[548px]">
-            <div className="text-2xl md:text-4xl text-[#2A0086] font-bold mb-6 md:mb-[30px]">
+          <div className="flex flex-col justify-start md:justify-start items-start w-[348px] md:w-full lg:w-[548px]">
+            <div className="text-2xl md:text-4xl text-[#2A0086] text-center md:text-left font-bold mb-6 md:mb-[30px]">
               One interest-bearing token, infinite stablecoin yield
             </div>
-            <div className="text-base md:text-md text-[#2f2f2f]">
+            <div className="text-base md:text-md text-[#2f2f2f] text-center md:text-left">
               PONY, the Passive Omnichain Net Yield index, is a single,
               interest-bearing token optimized to boost yields and generate
               passive income. Free from impermanent loss and managed by legacy
