@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
       <main className="flex flex-col justify-start items-center w-screen min-h-screen">
         <Header />
-        <div className="flex flex-col justify-center items-center w-full pt-32 md:pt-48 mx-0 px-0 bg-landing-hero bg-cover">
+        <div className="flex flex-col justify-center items-center w-full pt-32 md:pt-40 mx-0 px-0 bg-landing-hero bg-cover">
           <div className="flex flex-row justify-center md:items-center">
             <div className="flex flex-col justify-center md:justify-start items-center md:items-start max-w-xl">
               <h1 className="w-[348px] md:w-auto text-3xl md:text-5xl md:leading-[64px] text-white text-center md:text-left font-semibold mb-5">
@@ -38,15 +38,15 @@ const Home: NextPage = () => {
               <Image layout="fill" src="/hero-cowboy.png" alt="pony rider" />
             </div>
           </div>
-          <img src="/divide.svg" alt="" className="hidden md:block w-full mx-0 px-0" />
+          <img
+            src="/divide.svg"
+            alt=""
+            className="hidden md:block w-full mx-0 px-0"
+          />
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-36 my-16 md:my-20 lg:my-40">
           <div className="relative w-48 md:w-64 h-48 md:h-64">
-            <Image
-              layout="fill"
-              src="/pony-token.png"
-              alt="$PONY"
-            />
+            <Image layout="fill" src="/pony-token.png" alt="$PONY" />
           </div>
           <div className="flex flex-col justify-start items-start w-[348px] md:w-[548px]">
             <div className="text-2xl md:text-4xl text-[#2A0086] mb-6 md:mb-[30px]">

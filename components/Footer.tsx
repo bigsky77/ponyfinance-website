@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-footer bg-cover pt-32">
-      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full">
+    <div className="flex flex-col justify-center items-center w-full bg-footer bg-cover pt-32 overflow-hidden">
+      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-6xl w-full z-10">
         <div className="flex flex-col justify-center items-start gap-8">
           <div className="relative w-[200px] h-[40px]">
             <Image layout="fill" src="/pony-logo.png" alt="pony finance" />
@@ -50,7 +50,10 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="flex md:hidden justify-center items-center text-center text-xs text-[#CECECE] my-8">
+      <div className="absolute flex flex-row justify-end h-1/3 xl:h-64 w-full overflow-hidden bg-black">
+        <img src="/pony-footer.png" alt="" />
+      </div>
+      <div className="flex md:hidden justify-center items-center text-center text-xs text-[#CECECE] my-8 z-10">
         Copyright © 2022 Pony Finance. All rights reserved.
       </div>
     </div>
