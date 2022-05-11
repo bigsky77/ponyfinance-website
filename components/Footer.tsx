@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
             <Image layout="fill" src="/pony-logo.png" alt="pony finance" />
           </div>
           <div className="flex flex-col justify-center items-start gap-4 text-lg text-[#CECECE] md:mb-16">
-            <a href="docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
-              Gitbook
+            <a href="https://docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
+              Docs
             </a>
             <a
               href="https://medium.com/ponyfinance"

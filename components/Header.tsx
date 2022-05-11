@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <div className="flex justify-center items-center h-4">Blog</div>
           </div>
         </a>
-        <a href="docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
+        <a href="https://docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
           <div className="group flex flex-row justify-center items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-none group-hover:bg-[#847CFF] transform -translate-y-[2px]"></div>
             <div className="flex justify-center items-center h-4">Docs</div>
