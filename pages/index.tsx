@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Home: NextPage = () => {
+  const [showUniSwap, setShowUniSwap] = useState(false);
   return (
     <div>
       <Head>
@@ -17,6 +19,29 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex flex-col justify-start items-center w-screen min-h-screen">
+        {showUniSwap ? (
+          <div
+            onClick={() => setShowUniSwap(false)}
+            className="fixed top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 layer z-20"
+          >
+            <div className="w-[548px]">
+              <iframe
+                src="https://app.uniswap.org/#/swap?outputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
+                height="660px"
+                width="100%"
+                style={{
+                  border: "0",
+                  margin: "0 auto",
+                  marginBottom: ".5rem",
+                  display: "block",
+                  borderRadius: "10px",
+                  maxWidth: "960px",
+                  minWidth: "300px",
+                }}
+              />
+            </div>
+          </div>
+        ) : null}
         <Header />
         <div className="flex flex-col justify-center items-center w-full pt-32 md:pt-48 lg:pt-40 md:pb-16 mx-0 px-0 bg-landing-hero bg-cover header-clip">
           <div className="flex flex-row justify-center md:justify-start lg:justify-center md:items-center w-full md:max-w-2xl lg:max-w-5xl">
@@ -28,14 +53,22 @@ const Home: NextPage = () => {
               <div className="text-xl text-white text-center md:text-left mb-8 md:mb-[60px] w-[348px] md:w-[548px]">
                 Earn more with PONY, the Passive Omnichain Net Yield Index
               </div>
-              <a
-                href="https://share.hsforms.com/1MLLXd0LWQSejb-OcrN5AFgd1av5"
-                target="_blank"
-                rel="noreferrer"
-                className="flex justify-center items-center w-fit h-10 md:h-16 px-8 md:px-16 mb-14 lg:mb-0 bg-white rounded-full text-lg text-[#5000FF]"
-              >
-                Join the Waitlist
-              </a>
+              <div className="flex flex-row gap-8">
+                <div
+                  onClick={() => setShowUniSwap(true)}
+                  className="flex justify-center items-center w-fit h-10 md:h-16 px-8 md:px-16 mb-14 lg:mb-0 bg-white rounded-full text-lg text-[#5000FF] font-bold cursor-pointer"
+                >
+                  Get $PONY
+                </div>
+                <a
+                  href="https://share.hsforms.com/1MLLXd0LWQSejb-OcrN5AFgd1av5"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex justify-center items-center w-fit h-10 md:h-16 px-8 md:px-16 mb-14 lg:mb-0 bg-transparent border rounded-full text-lg text-white font-bold"
+                >
+                  Join the Waitlist
+                </a>
+              </div>
             </div>
             <div className="relative hidden lg:block w-[448px] h-[522px]">
               <Image layout="fill" src="/hero-cowboy.png" alt="pony rider" />
