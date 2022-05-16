@@ -4,13 +4,17 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full bg-footer bg-cover pt-32 overflow-hidden">
-      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-5xl w-full z-10">
+      <div className="flex flex-row justify-between items-center max-w-[348px] md:max-w-2xl lg:max-w-5xl w-full z-10 overflow-hidden">
         <div className="flex flex-col justify-center items-start gap-8">
           <div className="relative w-[200px] h-[40px]">
             <Image layout="fill" src="/pony-logo.png" alt="pony finance" />
           </div>
           <div className="flex flex-col justify-center items-start gap-4 text-lg text-[#CECECE] md:mb-16">
-            <a href="https://docs.ponyfinance.xyz" target="_blank" rel="noreferrer">
+            <a
+              href="https://docs.ponyfinance.xyz"
+              target="_blank"
+              rel="noreferrer"
+            >
               Docs
             </a>
             <a
@@ -52,7 +56,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="absolute flex flex-row justify-end h-64 w-full mb-4 max-w-[1770px] bg-black overflow-hidden ">
+      <div className="absolute flex flex-row justify-end h-64 w-11/12 mb-4 max-w-[1770px] bg-black overflow-hidden ">
         <img src="/pony-footer.png" alt="" />
       </div>
       <div className="flex md:hidden justify-center items-center text-center text-xs text-[#CECECE] my-8 z-10">
