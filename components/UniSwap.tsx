@@ -32,7 +32,7 @@ const UniSwap: React.FC<UniSwapProps> = ({
         <div className="flex flex-row justify-start items-center w-full h-8 px-4 rounded-t-xl bg-white text-2xl font-black float-right border-b-[1px]">
           <div
             onClick={() => (hide ? hide() : null)}
-            className="w-4 h-4 rounded-full bg-red-400 cursor-pointer"
+            className="w-4 h-4 rounded-full bg-red-400 cursor-pointer hover:bg-red-600 transition-colors"
           ></div>
         </div>
         <iframe
