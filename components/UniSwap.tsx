@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface UniSwapProps {
   inputCurrency?: string;
@@ -17,6 +17,18 @@ const UniSwap: React.FC<UniSwapProps> = ({
   theme = "light",
   hide,
 }) => {
+  const [screenWidth, setScreenWidth] = useState(screen.width);
+
+  useEffect(() => {
+    const listener = () => {
+      setScreenWidth(screen.width);
+    };
+
+    window.addEventListener("resize", listener);
+
+    return () => window.removeEventListener("resize", listener);
+  }, []);
+
   const UNISWAP_URL = "https://app.uniswap.org/#/swap";
   const params = new URLSearchParams();
 
@@ -35,20 +47,38 @@ const UniSwap: React.FC<UniSwapProps> = ({
             className="w-4 h-4 rounded-full bg-red-400 cursor-pointer hover:bg-red-600 transition-colors"
           ></div>
         </div>
-        <iframe
-          src={`${UNISWAP_URL}?${params.toString()}`}
-          height="660px"
-          width="100%"
-          style={{
-            border: "0",
-            margin: "0 auto",
-            marginBottom: ".5rem",
-            display: "block",
-            borderRadius: "0px 0px 12px 12px",
-            maxWidth: "960px",
-            minWidth: "300px",
-          }}
-        />
+
+        {screenWidth < 768 ? (
+          <iframe
+            src={`${UNISWAP_URL}?${params.toString()}`}
+            height="520px"
+            width="100%"
+            style={{
+              border: "0",
+              margin: "0 auto",
+              marginBottom: ".5rem",
+              display: "block",
+              borderRadius: "0px 0px 12px 12px",
+              maxWidth: "960px",
+              minWidth: "300px",
+            }}
+          />
+        ) : (
+          <iframe
+            src={`${UNISWAP_URL}?${params.toString()}`}
+            height="660px"
+            width="100%"
+            style={{
+              border: "0",
+              margin: "0 auto",
+              marginBottom: ".5rem",
+              display: "block",
+              borderRadius: "0px 0px 12px 12px",
+              maxWidth: "960px",
+              minWidth: "300px",
+            }}
+          />
+        )}
       </div>
     </div>
   );
