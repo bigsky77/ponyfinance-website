@@ -27,11 +27,14 @@ const UniSwap: React.FC<UniSwapProps> = ({
   if (theme) params.append("theme", theme);
 
   return (
-    <div
-      onClick={() => (hide ? hide() : null)}
-      className="fixed top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 animate-fade-in z-20"
-    >
+    <div className="fixed top-0 left-0 flex justify-center items-center w-screen h-screen bg-black bg-opacity-50 animate-fade-in z-20">
       <div className="w-[348px] md:w-[548px]">
+        <div className="flex flex-row justify-start items-center w-full h-8 px-4 rounded-t-xl bg-white text-2xl font-black float-right border-b-[1px]">
+          <div
+            onClick={() => (hide ? hide() : null)}
+            className="w-4 h-4 rounded-full bg-red-400 cursor-pointer"
+          ></div>
+        </div>
         <iframe
           src={`${UNISWAP_URL}?${params.toString()}`}
           height="660px"
@@ -41,7 +44,7 @@ const UniSwap: React.FC<UniSwapProps> = ({
             margin: "0 auto",
             marginBottom: ".5rem",
             display: "block",
-            borderRadius: "10px",
+            borderRadius: "0px 0px 12px 12px",
             maxWidth: "960px",
             minWidth: "300px",
           }}
