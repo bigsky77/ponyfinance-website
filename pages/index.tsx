@@ -48,7 +48,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col justify-start md:justify-start items-start w-[348px] md:w-full lg:w-[548px]">
             <div className="text-2xl md:text-4xl text-[#2A0086] text-center md:text-left font-bold mb-6 md:mb-[30px]">
-              One interest-bearing token, infinite stablecoin yield
+              One interest-bearing token, world-class stablecoin yield
             </div>
             <div className="text-base md:text-md text-[#2f2f2f] text-center md:text-left">
               PONY, the Passive Omnichain Net Yield index, is a single,
